@@ -156,17 +156,15 @@ def Foul():
     global strikes
     global fouls
 
-    if fouls == True:
+    while strikes < 2:
 
-        while strikes < 2:
-
-            Strike()
-
-            Swing()
-
-        Count ()
+        Strike()
 
         Swing()
+
+    Count ()
+
+    Swing()
 
 # What is Hit()?
 def Hit():
@@ -300,7 +298,7 @@ def Position():
     if position <= 3:
         print ('\nYou reached base', position, '\n')
 
-    elif position % 4:
+    elif position >= 4:
         AddRun()
 
 # What is Run()?
